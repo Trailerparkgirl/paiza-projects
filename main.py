@@ -1,24 +1,20 @@
-input_line = input()
-values = input_line.split(" ")
-N = int(values[0])
+quantity_size = input()
+
+quantity_size = quantity_size.split(' ')
+quantity = int(quantity_size[0])
+size = int(quantity_size[1])
+
+splits = []
+while len(splits) < quantity-1:
+    splits.append(int(input()))
+
+sum = size
+for split in range(len(splits)):
+    sum = sum + (size - splits[split])
+
+def calculate_square(i):
+    return size * i
+print(calculate_square(sum))
 
 
-cap = []
-for i in range(N):
-    cap = (input())
 
-
-M = int(values[1])
-people = []
-for B in range(M):
-    people.append(input())
-
-
-for gondola in cap:
-    if gondola < people[0]:
-        people[0] = people[0] - gondola
-
-
-print(cap)
-print(people)
-print(N)
